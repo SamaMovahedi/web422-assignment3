@@ -11,7 +11,7 @@ export default function BookDetails({
   const [favouritesList, setFavouritesList] = useAtom(favouritesAtom);
 
   const [showAdded, setShowAdded] = useState(
-    favouritesList.includes(workId)
+  favouritesList ? favouritesList.includes(workId) : false
   );
 
   const favouritesClicked = () => {
